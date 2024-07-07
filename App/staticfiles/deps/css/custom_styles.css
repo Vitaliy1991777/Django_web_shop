@@ -1,0 +1,145 @@
+.custom-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #a8bbbe;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.custom-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 30px;
+    background-color: #a8bbbe;
+    border-radius: 10px; /* Увеличен радиус закругления */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Увеличена тень */
+    max-width: 600px;
+    width: 100%; /* Добавлено для адаптивности */
+    margin: 20px auto;
+    font-family: 'Arial', sans-serif; /* Установлен шрифт */
+}
+
+.custom-form-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px; /* Увеличен размер шрифта заголовка */
+    color: #333; /* Цвет заголовка */
+}
+
+.custom-form-container form {
+    width: 100%;
+}
+
+.custom-form-container form .form-group {
+    margin-bottom: 15px;
+width: 100%; /* Добавлено для адаптивности */
+}
+
+.custom-form-container form .form-control {
+    width: 100%; /* Добавлено для адаптивности */
+    padding: 10px;
+    border-radius: 5px; /* Закругленные углы полей */
+    border: 12px solid #ccc; /* Цвет рамки */
+    font-size: 16px; /* Размер шрифта */
+}
+
+
+.custom-form-container form .form-control:focus {
+    border-color: #007bff; /* Цвет рамки при фокусе */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Тень при фокусе */
+}
+
+.custom-form-container form label {
+    font-weight: bold; /* Полужирный шрифт для меток */
+    margin-bottom: 5px;
+    display: block;
+}
+
+.custom-form-container form button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.custom-form-container form button:hover {
+    background-color: #0056b3;
+}
+
+#id_suggestion {
+    background-color: #7f9494; /* Цвет фона */
+    color: #000000; /* Цвет текста */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    width: 100%; /* Добавлено для адаптивности */
+    box-sizing: border-box; /* Добавлено для правильного учета padding и border */
+}
+
+#id_suggestion:focus {
+    border-color: #007bff; /* Цвет рамки при фокусе */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Тень при фокусе */
+}
+
+#id_name {
+    background-color: #7f9494; /* Цвет фона */
+    color: #000000; /* Цвет текста */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    width: 50%; /* Добавлено для адаптивности */
+    box-sizing: border-box; /* Добавлено для правильного учета padding и border */
+}
+
+#id_name:focus {
+    border-color: #007bff; /* Цвет рамки при фокусе */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Тень при фокусе */
+}
+
+#id_email {
+    background-color: #7f9494; /* Цвет фона */
+    color: #000000; /* Цвет текста */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    width: 50%; /* Добавлено для адаптивности */
+    box-sizing: border-box; /* Добавлено для правильного учета padding и border */
+}
+
+#id_email:focus {
+    border-color: #007bff; /* Цвет рамки при фокусе */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Тень при фокусе */
+}
+
+@media (max-width: 576px) {
+    .custom-form-container {
+        padding: 20px; /* Уменьшите отступы */
+        margin: 10px; /* Уменьшите внешние отступы */
+        width: calc(100% - 20px); /* Обеспечьте, чтобы контейнер не выходил за границы экрана */
+    }
+    
+    .form-group {
+        width: 100%;
+        padding: 10px 0; /* Увеличьте отступы сверху и снизу */
+    }
+
+    .custom-form-container form {
+        width: 100%;
+    }
+} 
+

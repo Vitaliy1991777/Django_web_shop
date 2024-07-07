@@ -1,0 +1,55 @@
+# version: '3.9'
+
+# services:
+#   web:
+#     build: .
+#     command: gunicorn --chdir App app.wsgi:application --bind 0.0.0.0:8000
+#     volumes:
+#       - .:/app
+#     ports:
+#       - "8000:8000"
+#     env_file: .env
+#     depends_on:
+#       - db
+
+#   db:
+#     image: postgres:13
+#     volumes:
+#       - postgres_data:/var/lib/postgresql/data/
+#     environment:
+#       - POSTGRES_DB=postgres
+#       - POSTGRES_USER=postgres
+#       - POSTGRES_PASSWORD=1234
+
+# volumes:
+#   postgres_data:
+
+version: '3.9'
+
+services:
+  web:
+    build: .
+    command: gunicorn --chdir App app.wsgi:application --bind 0.0.0.0:8000
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    env_file: .env
+    depends_on:
+      - db
+    working_dir: /app
+
+  db:
+    image: postgres:13
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 1234
+
+volumes:
+  postgres_data:
+
+
+
